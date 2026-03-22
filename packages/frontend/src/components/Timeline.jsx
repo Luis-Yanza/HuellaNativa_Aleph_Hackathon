@@ -10,7 +10,8 @@ export default function Timeline({ idLote }) {
         const cargarHistorial = async () => {
             try {
                 // 1. Conectamos a la red (Modo lectura, no requiere que el usuario conecte MetaMask)
-                const provider = new ethers.JsonRpcProvider(process.env.NEXT_PUBLIC_RPC_URL);
+                const rpcUrl = process.env.NEXT_PUBLIC_RPC_URL || 'https://ethereum-sepolia-rpc.publicnode.com';
+                const provider = new ethers.JsonRpcProvider(rpcUrl);
                 const contrato = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider);
 
                 // 2. Filtramos los eventos de la blockchain (Si le pasamos un idLote, busca solo ese)
