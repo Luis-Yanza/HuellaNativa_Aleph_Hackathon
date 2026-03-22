@@ -1,0 +1,171 @@
+[
+    {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "idLote",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "estado",
+                "type": "string"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "responsable",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "ubicacion",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "hashDocumentoAleph",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "NuevoEstadoRegistrado",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_idLote",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_nuevoEstado",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_ubicacion",
+                "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "_nuevoResponsable",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "_hashAleph",
+                "type": "string"
+            }
+        ],
+        "name": "actualizarEstado",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "contadorLotes",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_descripcion",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_ubicacion",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_hashAleph",
+                "type": "string"
+            }
+        ],
+        "name": "crearLote",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "inventario",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "descripcion",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "estadoActual",
+                "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "responsableActual",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "existe",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
